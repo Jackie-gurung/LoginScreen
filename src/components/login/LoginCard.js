@@ -14,15 +14,15 @@ import {
     Navigate,
   } from 'react-router-dom';
 
-//   email: 'frontend@docsumo.com',
-//   password: '76tA2RFJFq6vVhyE',
 
 class LoginCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: '',
-            password: '',
+            // email: '',
+            // password: '',
+            email: 'frontend@docsumo.com',
+            password: '76tA2RFJFq6vVhyE',
             showPassword: false,
             emailError: '',
             passwordError: '',

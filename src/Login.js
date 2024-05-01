@@ -1,4 +1,3 @@
-// import './App.css';
 import React from 'react';
 import { 
   BrowserRouter as Router,
@@ -21,7 +20,6 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // error: "User doesn't exist.",
       isLoading: false,
       error: null, //after clicking login button
       user: null,
