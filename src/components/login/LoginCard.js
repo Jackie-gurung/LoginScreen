@@ -11,15 +11,18 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate
+    Navigate,
   } from 'react-router-dom';
+
+//   email: 'frontend@docsumo.com',
+//   password: '76tA2RFJFq6vVhyE',
 
 class LoginCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'frontend@docsumo.com',
-            password: '76tA2RFJFq6vVhyE',
+            email: '',
+            password: '',
             showPassword: false,
             emailError: '',
             passwordError: '',
@@ -103,13 +106,9 @@ class LoginCard extends Component {
     render() {
         const { email, password, emailError, passwordError } = this.state;
         const {isLoading, error, isAuthenticated} = this.props;
-        // isAuthenticated && <Navigate to="/dashboard" replace/>
-        // console.log("FROM RENDER",this.state)
 
         return (
             <div>
-                {isAuthenticated && <Navigate to="/dashboard" replace/>}
-
                 <form onSubmit={this.handleSubmit} noValidate>
                     <div className="login">
                         <label htmlFor="email">Work Email</label>

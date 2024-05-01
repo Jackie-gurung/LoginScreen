@@ -45,7 +45,7 @@ class Login extends React.Component {
   // }
 
   render() {
-    const { error} = this.state;
+    const { error} = this.props;
     const {setIncrement, setDecrement,count} = this.props
 
     return (
@@ -61,6 +61,7 @@ class Login extends React.Component {
           <div className="Login">
             <div className="Login__container">
               <h2>Login to your Docsumo account</h2>
+              {error ? <ErrorMSgBlock message={"User doesn't exist."} /> : ''}
               {/* <ErrorMSgBlock message={error} /> */}
 
               <div className="social-login">
@@ -105,9 +106,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapState = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated
-})
+// const mapState = (state) => ({
+//   isAuthenticated: state.auth.isAuthenticated
+// })
 
 // const mapDispatch = (dispatch) => {
 //   return {
@@ -116,6 +117,6 @@ const mapState = (state) => ({
 //   }
 // }
 
-// export default connect(mapStateToProps)(Login);
-export default connect(mapState)(Login);
+export default connect(mapStateToProps)(Login);
+// export default connect(mapState)(Login);
 

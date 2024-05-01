@@ -30,6 +30,7 @@ const initialState = {
         };
       case LOGIN_FAILURE:
         console.log("login failure action is called",state)
+        console.log(action.payload)
         return {
           ...state,
           isLoading: false,
